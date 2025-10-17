@@ -1,0 +1,36 @@
+# 自動偵測文字檔案並執行 LF 換行符號標準化
+* text=auto
+
+# 明確宣告文字檔案使用 LF 換行符號
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+
+# 明確宣告二進位檔案
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.rar binary
+*.7z binary
+
+# 字體檔案
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+
+# PHP 檔案
+*.php text eol=lf
+
+# 確保檔案不會被 Git 修改換行符號
+*.min.js -text
+*.min.css -text
+
