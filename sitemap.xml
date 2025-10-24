@@ -86,9 +86,51 @@
 
       <loc>http://www.icareu.tw/job.html</loc>
 
-      <lastmod>2016-11-15</lastmod>
+      <lastmod>2024-12-19</lastmod>
 
       <changefreq>monthly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.icareu.tw/interview.html</loc>
+
+      <lastmod>2024-12-19</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.icareu.tw/interview-yongge.html</loc>
+
+      <lastmod>2024-12-19</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.icareu.tw/privacy.html</loc>
+
+      <lastmod>2024-12-19</lastmod>
+
+      <changefreq>yearly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://horizonip.icareu.tw/</loc>
+
+      <lastmod>2024-12-19</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
 
    </url>
 
