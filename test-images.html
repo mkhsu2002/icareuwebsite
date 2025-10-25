@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>圖片測試頁面</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .image-test img { max-width: 300px; height: auto; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>圖片載入測試</h1>
+    
+    <div class="image-test">
+        <h3>封面圖片測試</h3>
+        <p>路徑: crossbody/crossbody-bag-fashion.jpg</p>
+        <img src="crossbody/crossbody-bag-fashion.jpg" alt="封面圖片" onerror="this.parentNode.innerHTML += '<p class=error>載入失敗</p>'" onload="this.parentNode.innerHTML += '<p class=success>載入成功</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>通勤穿搭圖片測試</h3>
+        <p>路徑: crossbody/commute-fashion.avif</p>
+        <img src="crossbody/commute-fashion.avif" alt="通勤穿搭" onerror="this.parentNode.innerHTML += '<p class=error>載入失敗</p>'" onload="this.parentNode.innerHTML += '<p class=success>載入成功</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>約會穿搭圖片測試</h3>
+        <p>路徑: crossbody/date-fashion.avif</p>
+        <img src="crossbody/date-fashion.avif" alt="約會穿搭" onerror="this.parentNode.innerHTML += '<p class=error>載入失敗</p>'" onload="this.parentNode.innerHTML += '<p class=success>載入成功</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>假日穿搭圖片測試</h3>
+        <p>路徑: crossbody/holiday-fashion.avif</p>
+        <img src="crossbody/holiday-fashion.avif" alt="假日穿搭" onerror="this.parentNode.innerHTML += '<p class=error>載入失敗</p>'" onload="this.parentNode.innerHTML += '<p class=success>載入成功</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>校園穿搭圖片測試</h3>
+        <p>路徑: crossbody/campus-fashion.avif</p>
+        <img src="crossbody/campus-fashion.avif" alt="校園穿搭" onerror="this.parentNode.innerHTML += '<p class=error>載入失敗</p>'" onload="this.parentNode.innerHTML += '<p class=success>載入成功</p>'">
+    </div>
+    
+    <script>
+        console.log('測試頁面載入完成');
+        
+        // 檢查所有圖片載入狀態
+        setTimeout(function() {
+            const images = document.querySelectorAll('img');
+            let loadedCount = 0;
+            let failedCount = 0;
+            
+            images.forEach(function(img) {
+                if (img.complete && img.naturalHeight !== 0) {
+                    loadedCount++;
+                } else {
+                    failedCount++;
+                }
+            });
+            
+            console.log('圖片載入統計:', {
+                total: images.length,
+                loaded: loadedCount,
+                failed: failedCount
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
